@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5ef" />
+  <title>Edu Gemini | Your learning studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/" aria-label="Edu Gemini home">
+      <span class="brand-mark" aria-hidden="true">e</span>
+      <span>edu<span class="brand-light">gemini</span></span>
+    </a>
+    <span class="header-note"><span class="status-dot"></span> Your learning studio</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">A LITTLE CLARITY GOES A LONG WAY</p>
+      <h1 id="page-title">Make it <span>make sense.</span></h1>
+      <p class="intro-copy">Bring a question. Leave with a clearer picture.</p>
+    </section>
+
+    <div class="workspace">
+      <section class="study-panel" aria-label="Create a learning session">
+        <div class="panel-heading">
+          <span class="step-number">01</span>
+          <h2>Set up your session</h2>
+        </div>
+
+        <label class="field-label" for="level">Your level</label>
+        <div class="select-wrap">
+          <select id="level" name="level">
+            <option>School</option>
+            <option>College</option>
+            <option>Exam prep</option>
+          </select>
+          <span class="select-caret" aria-hidden="true">⌄</span>
+        </div>
+
+        <fieldset class="mode-field">
+          <legend class="field-label">Choose a mode</legend>
+          <div class="modes" role="group" aria-label="Learning mode">
+            <button class="mode active" type="button" data-mode="Explain" aria-pressed="true">
+              <span class="mode-icon" aria-hidden="true">↗</span>Explain
+            </button>
+            <button class="mode" type="button" data-mode="Quiz me" aria-pressed="false">
+              <span class="mode-icon" aria-hidden="true">?</span>Quiz me
+            </button>
+            <button class="mode" type="button" data-mode="Study plan" aria-pressed="false">
+              <span class="mode-icon" aria-hidden="true">≡</span>Study plan
+            </button>
+          </div>
+        </fieldset>
+
+        <label class="field-label" for="question">What are you working on?</label>
+        <textarea id="question" name="question" rows="5" maxlength="4000" placeholder="A topic, a tricky question, or something you want to understand better…"></textarea>
+        <div class="input-meta">
+          <span>Be as specific as you like</span>
+          <span id="char-count">0 / 4000</span>
+        </div>
+
+        <button id="goBtn" class="go" type="button">
+          <span>Ask Edu Gemini</span><span class="go-arrow" aria-hidden="true">↗</span>
+        </button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="answer-panel" aria-labelledby="answer-title">
+        <div class="answer-topline">
+          <div class="panel-heading answer-heading">
+            <span class="step-number step-number-coral">02</span>
+            <h2 id="answer-title">Your answer</h2>
+          </div>
+          <span id="answer-badge" class="answer-badge">READY</span>
+        </div>
+        <div id="output" class="output" aria-live="polite" aria-atomic="true">
+          <div class="empty-state">
+            <div class="empty-illustration" aria-hidden="true"><span>?</span></div>
+            <h3>Your next aha moment<br />starts here.</h3>
+            <p>Your explanation, quiz, or study plan will show up in this space.</p>
+          </div>
+        </div>
+        <div class="answer-footer"><span class="footer-spark" aria-hidden="true">✳</span> Made for curious minds</div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"><span>EDU GEMINI</span><span>Powered by Gemini</span></footer>
+</body>
+</html>
